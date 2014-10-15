@@ -1,0 +1,45 @@
+# uncomment out #email and sleep below after testing and viewing log
+# restore comment to email and sleep after emailing students
+
+TEST="Lab 2"
+WEEK=2
+DATE="Oct 16, 2014"
+TIME="9:00am"
+LOCATION="B250"
+SECTION="Th9"
+LOGFILE="log.week$WEEK.$SECTION"
+SIGNATURE="-CSE15L Tutor Team"
+
+rm -f $LOGFILE
+
+cat roster.$SECTION | while read first last pid email seat
+do
+	echo Dear $first $last, >> message
+	echo >> message
+	echo Here is your assigned seat for $TEST. >> message
+	echo If you cannot find your seat, please ask for assistance. >> message
+	echo We have seating charts available. >> message
+	echo >> message
+	echo "        "$TEST - $DATE at >> message
+	echo "        "$TIME in $LOCATION >> message
+	echo >> message
+	echo "        "$first $last:   seat:  $seat >> message
+	echo >> message
+	echo See you in lab. >> message
+	echo >> message
+	echo Best, >> message
+	echo $SIGNATURE >> message
+
+	echo mailx -s "$TEST Seating Assignment: $seat" $email lt message
+	echo mailx -s "$TEST Seating Assignment" $email lt message >> $LOGFILE
+	echo >> $LOGFILE
+	cat message >> $LOGFILE
+	echo >> $LOGFILE
+	echo "------------------------------------" >> $LOGFILE
+	echo >> $LOGFILE
+
+	#mailx -s "$TEST Seating Assignment: $seat" $email < message
+	#sleep 1
+
+	rm message
+done
