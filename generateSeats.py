@@ -36,15 +36,14 @@ for j in range(0,7):
     for student in section[j]:
         if i > 42:
             if i%2==0:
-                student.append(i-40)
+                student.append(i-42)
             else:
                  student.append(i-41)
         else:
             if i%2 == 0:
-              student.append(i-1)
+                student.append(i-1)
             else:
-             student.append(i)
-
+                student.append(i)
         i+=1
 
 g = open ('roster.W3', 'w')

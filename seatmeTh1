@@ -38,8 +38,8 @@ do
 	echo "------------------------------------" >> $LOGFILE
 	echo >> $LOGFILE
 
-	#mailx -s "$TEST Seating Assignment: $seat" $email < message
-	#sleep 1
+	mailx -s "$TEST Seating Assignment: $seat" $email < message
+	sleep 1
 
 	rm message
 done
