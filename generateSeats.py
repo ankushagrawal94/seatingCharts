@@ -29,7 +29,7 @@ with open('/Development/seatingCharts/sections.txt','rU') as f:
         if len(student[0])!=0:
          temp.append(student)
 
-print "Generating Text Files" '\n'
+#print "Generating Text Files" '\n'
 for j in range(0,7):
     random.shuffle(section[j])
     i = 1
@@ -123,4 +123,4 @@ g.close()
 h.close()
 e.close()
 
-print "Script Complete" '\n'
+#print "Script Complete" '\n'
