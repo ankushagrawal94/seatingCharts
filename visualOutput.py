@@ -7,7 +7,7 @@ allStudents = []
 occupied = [0] * 100
 
 def importStudents():
-    with open('/Development/seatingCharts/' + sys.argv[1],'rU') as f:
+    with open('/Development/seatingCharts/rosters/' + sys.argv[1],'rU') as f:
         reader=csv.reader(f,delimiter='\t')
         for student in reader:
             allStudents.append(student[0] + '\t' + student[3])
@@ -194,7 +194,7 @@ def printRow(c):
             c.drawString(10.6*inch, -1.8*inch + yOffset + ySeperator, str(seat))
            
 importStudents()
-c = canvas.Canvas(sys.argv[1]+".pdf")
+c = canvas.Canvas("rosters/"+sys.argv[1]+".pdf")
 c.translate(0*inch, 0*inch)
 c.rotate(90)
 c.rect(.65*inch,-7.5*inch,10.5*inch,6*inch, stroke=1)

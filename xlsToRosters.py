@@ -36,7 +36,7 @@ def getStudents():
 
 def randomizeSeating():
   for j in range(0,7):
-    random.shuffle(sections[j])
+    random.shuffle(sections[j], random.seed(datetime.datetime.now().isocalendar()[1]))
     i = 1
     for student in sections[j]:
       if i > 42:
@@ -56,7 +56,7 @@ def outputFiles():
     g = open ('rosters/'+ 'roster.' + sectionNames[idx], 'w')
     e = open ('rosters/'+ 'roster.'+ sectionNames[idx] +'.txt', 'w')
     h = open ('rosters/'+ sectionNames[idx] + '.txt', 'w')
-    for student in sections[0]:
+    for student in sections[idx]:
       g.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
       e.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
       h.write (student[0] + '\t' + "%d" % (student[len(student) - 1]) + '\n')
@@ -65,6 +65,7 @@ def outputFiles():
     e.close()
 
 import random
+import datetime
 
 f = open('sections.xls', 'r')
 html_str = ""
@@ -82,4 +83,4 @@ getStudents()
 randomizeSeating()
 outputFiles()
 
-print sections
+#print sections

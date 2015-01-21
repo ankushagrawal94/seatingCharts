@@ -1,12 +1,12 @@
 # uncomment out #email and sleep below after testing and viewing log
 # restore comment to email and sleep after emailing students
 
-TEST="Lab 6"
-WEEK=6
-DATE="Nov 13, 2014"
-TIME="5:00pm"
+TEST="Lab 1"
+WEEK=2
+DATE="Jan 15, 2015"
+TIME="9:00am"
 LOCATION="B250"
-SECTION="Th5"
+SECTION="Th9"
 LOGFILE="log.week$WEEK.$SECTION"
 SIGNATURE="-CSE15L Tutor Team"
 

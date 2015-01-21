@@ -6,7 +6,7 @@ week0 = 1
 
 def next_weekday(d, weekday): # Weekday represents day of week 0 = Monday, 1=Tuesday, 2=Wednesday...
     days_ahead = weekday - d.weekday()
-    if days_ahead <= 0: # Target day already happened this week
+    if days_ahead < 0: # Target day already happened this week
         days_ahead += 7
     return d + datetime.timedelta(days_ahead)
 
@@ -26,7 +26,7 @@ for section in sectionNames:
   newDate = ("%s %s, %s" % (time.strftime("%b"), nextWeek.day, nextWeek.year))
   weekNum = nextWeek.date().isocalendar()[1] - week0
   labNum = str(weekNum - 1)
-  f = open('seatme'+  section, 'r')
+  f = open('rosters/'+'seatme'+  section, 'r')
   fullTxt = ""
   for line in f:
     if line.count("TEST=") != 0:
@@ -34,8 +34,8 @@ for section in sectionNames:
     if line.count("WEEK=") != 0:
       line = "WEEK=" + str(weekNum) + '\n'
     if line.count("DATE=") != 0:
-      line = "DATE=" + newDate + '\n'
+      line = "DATE=\"" + newDate + '\"\n'
     fullTxt += str(line)
 
-  g = open('seatme'+ section, 'wb')
+  g = open('rosters/'+'seatme'+ section, 'wb')
   g.write(fullTxt)

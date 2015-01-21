@@ -1,8 +1,8 @@
 import csv, sys, shlex
 
 def alpha(day):
-	g = open('roster.' + day + '.alpha.txt', 'w')
-	with open('/Development/seatingCharts/roster.' + day + '.txt','rU') as f:
+	g = open('rosters/'+'roster.' + day + '.alpha.txt', 'w')
+	with open('/Development/seatingCharts/rosters/roster.' + day + '.txt','rU') as f:
 	    reader=csv.reader(f,delimiter='\t')
 	    names = []
 	    for student in reader:
@@ -18,7 +18,7 @@ def alpha(day):
 		g.write(name[0] + "\t" + name[1] + "\n")
 	g.close()
 
-alpha("W3")
+alpha("W4")
 alpha("W7")
 alpha("Th9")
 alpha("Th11")

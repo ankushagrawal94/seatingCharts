@@ -1,3 +1,3 @@
-scp -r /Development/seatingCharts/rosters cs12x3@ieng6.ucsd.edu:.
+scp -r /Development/seatingCharts/rosters cs12x4@ieng6.ucsd.edu:.
 
-ssh cs12x3@ieng6.ucsd.edu bash -c "rmdir rosters;"
+ssh cs12x4@ieng6.ucsd.edu 'cd rosters; ./runAllMail.sh'

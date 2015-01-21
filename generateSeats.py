@@ -28,10 +28,11 @@ with open('/Development/seatingCharts/sections.txt','rU') as f:
             break
         if len(student[0])!=0:
          temp.append(student)
+         print student
 
 #print "Generating Text Files" '\n'
 for j in range(0,7):
-    random.shuffle(section[j])
+    random.shuffle(section[j], random.seed(2))
     i = 1
     for student in section[j]:
         if i > 42:
