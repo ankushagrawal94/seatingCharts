@@ -3,6 +3,8 @@ echo Creating txt files based on sections.xls
 python xlsToRosters.py
 echo Generating pdfs
 ./allVisuals.sh
+echo merging pdfs
+python mergePDFS.py
 echo Creating alphabetized files
 python alphabetize.py
 echo modifying config files

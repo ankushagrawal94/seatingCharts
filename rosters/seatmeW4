@@ -1,9 +1,9 @@
 # uncomment out #email and sleep below after testing and viewing log
 # restore comment to email and sleep after emailing students
 
-TEST="Lab 1"
-WEEK=2
-DATE="Jan 14, 2015"
+TEST="Lab 2"
+WEEK=3
+DATE="Jan 21, 2015"
 TIME="4:00pm"
 LOCATION="B250"
 SECTION="W4"
@@ -38,8 +38,8 @@ do
 	echo "------------------------------------" >> $LOGFILE
 	echo >> $LOGFILE
 
-	#mailx -s "$TEST Seating Assignment: $seat" $email < message
-	#sleep 1
+	mailx -s "$TEST Seating Assignment: $seat" $email < message
+	sleep 1
 
 	rm message
 done

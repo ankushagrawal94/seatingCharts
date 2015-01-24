@@ -39,6 +39,9 @@ def randomizeSeating():
     random.shuffle(sections[j], random.seed(datetime.datetime.now().isocalendar()[1]))
     i = 1
     for student in sections[j]:
+      if student[0] == 'hector cruz' or student[0] == 'taylor durrer':
+        student.append(42)
+        continue
       if i > 42:
         if i%2==0:
             student.append(i-42)
