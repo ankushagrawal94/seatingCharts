@@ -44,9 +44,9 @@ def randomizeSeating():
         continue
       if i > 42:
         if i%2==0:
-            student.append(i-42)
+            student.append((i-44)*2+2)
         else:
-             student.append(i-41)
+            student.append((i-43)*2+2)
       else:
         if i%2 == 0:
             student.append(i-1)
