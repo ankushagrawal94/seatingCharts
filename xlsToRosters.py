@@ -35,13 +35,10 @@ def getStudents():
     sections.append(section)
 
 def randomizeSeating():
-  for j in range(0,7):
+  for j in range(0,11):
     random.shuffle(sections[j], random.seed(datetime.datetime.now().isocalendar()[1]))
     i = 1
     for student in sections[j]:
-      if student[0] == 'hector cruz' or student[0] == 'taylor durrer':
-        student.append(42)
-        continue
       if i > 42:
         if i%2==0:
             student.append((i-44)*2+2)
@@ -72,7 +69,7 @@ import datetime
 
 f = open('sections.xls', 'r')
 html_str = ""
-sectionNames = ["W4", "W7", "Th9", "Th11", "Th1", "Th3", "Th5"]
+sectionNames = ["W4", "W6", "W8", "Th9", "Th11", "Th1", "Th3", "Th5", "Th7", "F10", "F12"]
 sections = []
 
 for line in f:

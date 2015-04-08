@@ -1,9 +1,9 @@
 # uncomment out #email and sleep below after testing and viewing log
 # restore comment to email and sleep after emailing students
 
-TEST="Lab 3"
-WEEK=4
-DATE="Jan 28, 2015"
+TEST="Lab 1"
+WEEK=2
+DATE="Apr 1, 2015"
 TIME="4:00pm"
 LOCATION="B250"
 SECTION="W4"

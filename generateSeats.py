@@ -1,14 +1,18 @@
 import csv, random
 
-W3 = []
-W7 = []
+W4 = []
+W6 = []
+W8 = []
 Th9 = []
 Th11 = []
 Th1 = []
 Th3 = []
 Th5 = []
+Th7 = []
+F10 = []
+F12 = []
 
-section = [W3, W7, Th9, Th11, Th1, Th3, Th5]
+section = [W4, W6, W8, Th9, Th11, Th1, Th3, Th5, Th7, F10, F12]
 temp = []
 
 with open('/Development/seatingCharts/sections.txt','rU') as f:
@@ -31,7 +35,7 @@ with open('/Development/seatingCharts/sections.txt','rU') as f:
          print student
 
 #print "Generating Text Files" '\n'
-for j in range(0,7):
+for j in range(0,10):
     random.shuffle(section[j])
     i = 1
     for student in section[j]:
@@ -47,9 +51,9 @@ for j in range(0,7):
                 student.append(i)
         i+=1
 
-g = open ('roster.W3', 'w')
-e = open ('roster.W3.txt', 'w')
-h = open ('W3.txt', 'w')
+g = open ('roster.W4', 'w')
+e = open ('roster.W4.txt', 'w')
+h = open ('W4.txt', 'w')
 for student in section[0]:
     g.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
     e.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
@@ -58,9 +62,20 @@ g.close()
 h.close()
 e.close()
 
-g = open ('roster.W7', 'w')
-e = open ('roster.W7.txt', 'w')
-h = open ('W7.txt', 'w')
+g = open ('roster.W6', 'w')
+e = open ('roster.W6.txt', 'w')
+h = open ('W6.txt', 'w')
+for student in section[1]:
+    g.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
+    e.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
+    h.write (student[0] + '\t' + "%d" % (student[len(student) - 1]) + '\n')
+g.close()
+h.close()
+e.close()
+
+g = open ('roster.W8', 'w')
+e = open ('roster.W8.txt', 'w')
+h = open ('W8.txt', 'w')
 for student in section[1]:
     g.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
     e.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
@@ -116,6 +131,39 @@ e.close()
 g = open ('roster.Th5', 'w')
 e = open ('roster.Th5.txt', 'w')
 h = open ('Th5.txt', 'w')
+for student in section[6]:
+    g.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
+    e.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
+    h.write (student[0] + '\t' + "%d" % (student[len(student) - 1]) + '\n')
+g.close()
+h.close()
+e.close()
+
+g = open ('roster.Th7', 'w')
+e = open ('roster.Th7.txt', 'w')
+h = open ('Th7.txt', 'w')
+for student in section[6]:
+    g.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
+    e.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
+    h.write (student[0] + '\t' + "%d" % (student[len(student) - 1]) + '\n')
+g.close()
+h.close()
+e.close()
+
+g = open ('roster.F10', 'w')
+e = open ('roster.F10.txt', 'w')
+h = open ('F10.txt', 'w')
+for student in section[6]:
+    g.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
+    e.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
+    h.write (student[0] + '\t' + "%d" % (student[len(student) - 1]) + '\n')
+g.close()
+h.close()
+e.close()
+
+g = open ('roster.F12', 'w')
+e = open ('roster.F12.txt', 'w')
+h = open ('F12.txt', 'w')
 for student in section[6]:
     g.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
     e.write (student[0] + '\t' + student[1] + '\t' + student[2] + '\t' +"%d" % (student[len(student) - 1]) + '\n')
